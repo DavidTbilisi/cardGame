@@ -1,0 +1,34 @@
+body{
+	background: radial-gradient(#335741, #053345);
+}
+p{
+	color: #123;
+}
+
+.color{
+	background: rgba(93, 163, 109, 0.01);
+	
+    /*height: 32%;*/
+}
+
+
+img {
+height: 400px;
+    width: 320px; 
+    
+}
+
+p {
+    font-size: 105px;
+    font-weight: bolder;
+}
+
+#good{
+    margin-top: 20%;
+    color: limegreen;
+}
+
+#bad{
+     margin-top: 20%;
+    color: #f26b6b;
+}
