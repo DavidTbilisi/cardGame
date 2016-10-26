@@ -32,3 +32,22 @@ p {
      margin-top: 20%;
     color: #f26b6b;
 }
+
+@media screen and (min-device-width : 720px) {
+
+   
+
+   img {
+    height: 200px;
+    width: 250px; 
+    
+}
+
+body{
+    background: radial-gradient(#439663, #1D5165);
+}
+
+
+
+
+}
