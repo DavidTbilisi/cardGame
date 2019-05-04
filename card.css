@@ -13,9 +13,8 @@ p{
 
 
 img {
-height: 400px;
+    height: 400px;
     width: 320px; 
-    
 }
 
 p {
@@ -24,23 +23,19 @@ p {
 }
 
 #good{
-    margin-top: 20%;
     color: limegreen;
 }
 
 #bad{
-     margin-top: 20%;
     color: #f26b6b;
 }
 
 @media screen and (min-device-width : 720px) {
 
-   
-
    img {
-    height: 200px;
-    width: 250px; 
-    
+    height: 150px;
+    width: 150px; 
+    padding: 10px;
 }
 
 body{
