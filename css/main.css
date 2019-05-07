@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  background: rgba(48, 24, 14, 0.815);
+}
+
+#points .d-flex {
+  font-size: 4rem;
+}
+/*# sourceMappingURL=main.css.map */

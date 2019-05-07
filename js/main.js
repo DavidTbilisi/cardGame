@@ -4,8 +4,12 @@ let vm = new Vue({
         title: 'Game',
         mast: ['t_','p_','b_','c_'],
         cards: [],
-        cardCount: 4,
+        cardCount: 6,
         fromGenCards: "c_02",
+        points: {
+            win:0,
+            lost:0
+        }
     },
     methods: {
         random: function (randome){
@@ -25,7 +29,7 @@ let vm = new Vue({
             } 
             let oneOf = this.random({min:0, max:this.cardCount-1});
             console.log(oneOf);
-            setTimeout (() => {this.fromGenCards = this.cards[oneOf]},111);
+            this.fromGenCards = this.cards[oneOf];
 
         },
         test: function (e) {
@@ -33,8 +37,11 @@ let vm = new Vue({
                 e.target.style.border = "5px solid green";
                 setTimeout (() => {
                     e.target.style.border = "none";
+                    this.points.win++;
                     this.genCards();
                 }, 500)
+            } else {
+                this.points.lost--;
             }
         }
     },
