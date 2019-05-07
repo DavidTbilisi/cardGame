@@ -14,11 +14,11 @@
     <div class="container text-center bg-primary" id="root">
         <div class="row">
             <div class="col" v-for="card in cards">
-                <img class="img-fluid" :src="`img/kard/${card}.svg`" :data-match="card" alt="">
+                <img class="img-fluid" :src="`img/kard/${card}.svg`" :data-match="card" @click="test">
             </div>
         </div>
 
-        <div class="row pt-2    pb-5">
+        <div class="row pt-2 pb-5">
             <div class="col">1</div>
             <div class="col">
                 <img class="img-fluid" :src="`img/obr/${fromGenCards}.jpg`" :data-match="fromGenCards" alt="">
