@@ -3,7 +3,9 @@ let vm = new Vue({
     data: {
         title: 'Game',
         mast: ['t_','p_','b_','c_'],
-        cards: []
+        cards: [],
+        cardCount: 4,
+        fromGenCards: "c_02",
     },
     methods: {
         random: function (randome){
@@ -15,11 +17,17 @@ let vm = new Vue({
             return s;
         },
         genCards: function() {
-            
-        }
+            for (let i = 0; i < this.cardCount; i++) {
+                let card = this.random({min:1, max:13});
+                let mast = this.random({min:0, max:3});
+                this.cards.push( this.mast[mast] + this.pad(card) );
+            } 
+            let oneOf = this.random({min:0, max:this.cardCount});
+            this.fromGenCards = this.cards[oneOf];
+        },
+        
     },
     mounted() {
-        let rand = this.random({min:1, max:13});
-        console.log(this.pad(rand))
+        this.genCards();
     }
 });
